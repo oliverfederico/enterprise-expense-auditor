@@ -1,0 +1,72 @@
+{
+  "report_id": "EXP-2026-002",
+  "employee_id": "EMP-4102",
+  "employee_name": "Jordan Lee",
+  "department": "Engineering",
+  "submission_date": "2026-10-05",
+  "trip_purpose": "Client Technical Onsite in Chicago",
+  "origin": "Downtown Office",
+  "destination": "Hotel Intercontinental Chicago",
+  "justification_notes": "Dinner with drinks and an Uber back to hotel. Public transit was available (subway took 8 minutes), but I was tired.",
+  "attendees": [],
+  "receipts": [
+    {
+      "receipt_id": "REC-8892",
+      "vendor": "The Prime Chop House",
+      "date": "2026-10-04",
+      "time": "20:15",
+      "category": "MEALS",
+      "subtotal": 100.00,
+      "tax": 10.00,
+      "tip": 20.00,
+      "total_amount": 130.00,
+      "currency": "USD",
+      "is_itemized": true,
+      "line_items": [
+        {
+          "description": "Filet Mignon 8oz",
+          "amount": 60.00,
+          "category": "MEALS",
+          "is_alcohol": false,
+          "quantity": 1
+        },
+        {
+          "description": "Bourbon Old Fashioned Cocktail",
+          "amount": 20.00,
+          "category": "ALCOHOL",
+          "is_alcohol": true,
+          "quantity": 1
+        },
+        {
+          "description": "Cabernet Sauvignon Glass",
+          "amount": 20.00,
+          "category": "ALCOHOL",
+          "is_alcohol": true,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "receipt_id": "REC-8893",
+      "vendor": "Uber Technologies",
+      "date": "2026-10-04",
+      "time": "21:30",
+      "category": "GROUND_TRANSIT",
+      "subtotal": 24.50,
+      "tax": 0.00,
+      "tip": 4.00,
+      "total_amount": 28.50,
+      "currency": "USD",
+      "is_itemized": true,
+      "line_items": [
+        {
+          "description": "UberX Ride",
+          "amount": 24.50,
+          "category": "GROUND_TRANSIT",
+          "is_alcohol": false,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

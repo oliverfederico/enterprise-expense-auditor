@@ -29,6 +29,7 @@ ENV/
 # Environment Variables & Secrets
 .env
 *.local.env
+app_config.env
 
 # Testing & Linting
 .pytest_cache/

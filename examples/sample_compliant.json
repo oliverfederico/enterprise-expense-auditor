@@ -1,0 +1,50 @@
+{
+  "report_id": "EXP-2026-001",
+  "employee_id": "EMP-4102",
+  "employee_name": "Jordan Lee",
+  "department": "Engineering",
+  "submission_date": "2026-10-05",
+  "trip_purpose": "Client Technical Onsite in Chicago",
+  "origin": "O'Hare Airport",
+  "destination": "Hotel Intercontinental Chicago",
+  "justification_notes": "Individual travel meal during client onsite engagement.",
+  "attendees": [],
+  "receipts": [
+    {
+      "receipt_id": "REC-8891",
+      "vendor": "Giordano's Pizzeria",
+      "date": "2026-10-04",
+      "time": "19:30",
+      "category": "MEALS",
+      "subtotal": 38.00,
+      "tax": 3.80,
+      "tip": 7.00,
+      "total_amount": 48.80,
+      "currency": "USD",
+      "is_itemized": true,
+      "line_items": [
+        {
+          "description": "Deep Dish Personal Pizza",
+          "amount": 26.00,
+          "category": "MEALS",
+          "is_alcohol": false,
+          "quantity": 1
+        },
+        {
+          "description": "House Garden Salad",
+          "amount": 8.00,
+          "category": "MEALS",
+          "is_alcohol": false,
+          "quantity": 1
+        },
+        {
+          "description": "Iced Tea",
+          "amount": 4.00,
+          "category": "MEALS",
+          "is_alcohol": false,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}
