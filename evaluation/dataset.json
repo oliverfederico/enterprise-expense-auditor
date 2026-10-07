@@ -1,0 +1,1121 @@
+[
+  {
+    "case_id": "TC-01",
+    "slice": "clean_compliant",
+    "description": "Standard individual dinner well under per diem cap",
+    "report": {
+      "report_id": "EXP-TC-01",
+      "employee_id": "EMP-101",
+      "employee_name": "Sarah Connor",
+      "department": "Sales",
+      "submission_date": "2026-10-02",
+      "trip_purpose": "Client visit in Seattle",
+      "origin": "Seattle Hotel",
+      "destination": "Local Restaurant",
+      "justification_notes": "Dinner while traveling on client sales trip.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-01",
+          "vendor": "Pike Place Chowder",
+          "date": "2026-10-01",
+          "time": "19:00",
+          "category": "MEALS",
+          "subtotal": 35.00,
+          "tax": 3.50,
+          "tip": 6.50,
+          "total_amount": 45.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Seafood Chowder Sourdough Bowl", "amount": 25.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Lemonade", "amount": 10.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "Under $75 per diem, itemized, zero alcohol, compliant tip."
+    }
+  },
+  {
+    "case_id": "TC-02",
+    "slice": "clean_compliant",
+    "description": "Public subway commute between meetings",
+    "report": {
+      "report_id": "EXP-TC-02",
+      "employee_id": "EMP-102",
+      "employee_name": "Marcus Wright",
+      "department": "Engineering",
+      "submission_date": "2026-10-02",
+      "trip_purpose": "Architecture Review in NYC",
+      "origin": "Midtown Office",
+      "destination": "Financial District Office",
+      "justification_notes": "Subway transit between meeting sites.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-02",
+          "vendor": "MTA MetroCard",
+          "date": "2026-10-01",
+          "time": "14:15",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 2.90,
+          "tax": 0.0,
+          "tip": 0.0,
+          "total_amount": 2.90,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Subway Single Ride", "amount": 2.90, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "Public transit is strongly encouraged by SEC-2.1."
+    }
+  },
+  {
+    "case_id": "TC-03",
+    "slice": "clean_compliant",
+    "description": "Compliant client dinner with 3 attendees and full details",
+    "report": {
+      "report_id": "EXP-TC-03",
+      "employee_id": "EMP-103",
+      "employee_name": "Elena Rostova",
+      "department": "Business Development",
+      "submission_date": "2026-10-03",
+      "trip_purpose": "Enterprise contract renewal negotiation",
+      "origin": "Client HQ",
+      "destination": "Ocean Prime",
+      "justification_notes": "Business dinner to finalize annual SaaS renewal terms with client leadership.",
+      "attendees": [
+        "Elena Rostova (VP BD, Internal)",
+        "David Clark (CTO, Acme Corp)",
+        "Susan Wu (Head of Procurement, Acme Corp)"
+      ],
+      "receipts": [
+        {
+          "receipt_id": "REC-03",
+          "vendor": "Ocean Prime Steak & Seafood",
+          "date": "2026-10-02",
+          "time": "19:45",
+          "category": "CLIENT_ENTERTAINMENT",
+          "subtotal": 200.00,
+          "tax": 20.00,
+          "tip": 40.00,
+          "total_amount": 260.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Ribeye Steak 16oz", "amount": 75.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Chilean Sea Bass", "amount": 65.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Filet Mignon 10oz", "amount": 60.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Pinot Noir Bottle", "amount": 35.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "3 attendees, $260 total = $86.67/person (under $150 cap). Alcohol $35 is 17.5% of $200 subtotal (under 20% cap)."
+    }
+  },
+  {
+    "case_id": "TC-04",
+    "slice": "clean_compliant",
+    "description": "Standard corporate hotel room under city tier rate",
+    "report": {
+      "report_id": "EXP-TC-04",
+      "employee_id": "EMP-104",
+      "employee_name": "James Holden",
+      "department": "Operations",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Facility inspection in Austin",
+      "origin": "Austin Airport",
+      "destination": "Hyatt Place Austin",
+      "justification_notes": "Standard business lodging during facility inspection.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-04",
+          "vendor": "Hyatt Place Austin Downtown",
+          "date": "2026-10-03",
+          "time": "11:00",
+          "category": "LODGING",
+          "subtotal": 175.00,
+          "tax": 26.25,
+          "tip": 0.0,
+          "total_amount": 201.25,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Standard King Room 1 Night", "amount": 175.00, "category": "LODGING", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "Subtotal $175 is under the $200 Tier 2 nightly cap under SEC-4.1."
+    }
+  },
+  {
+    "case_id": "TC-05",
+    "slice": "clean_compliant",
+    "description": "Rideshare permitted because public transit takes 35 minutes",
+    "report": {
+      "report_id": "EXP-TC-05",
+      "employee_id": "EMP-105",
+      "employee_name": "Naomi Nagata",
+      "department": "Engineering",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Data Center Maintenance",
+      "origin": "Hotel Downtown",
+      "destination": "Suburban Data Center",
+      "justification_notes": "Rideshare taken to remote facility; public bus route takes 35 minutes.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-05",
+          "vendor": "Lyft",
+          "date": "2026-10-03",
+          "time": "08:30",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 32.00,
+          "tax": 0.0,
+          "tip": 5.00,
+          "total_amount": 37.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Standard Lyft Ride", "amount": 32.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "Transit duration is 35 minutes (>15 minutes threshold), so rideshare is compliant under SEC-2.1."
+    }
+  },
+  {
+    "case_id": "TC-06",
+    "slice": "clear_violations",
+    "description": "Alcohol exceeds 20% cap on dinner subtotal",
+    "report": {
+      "report_id": "EXP-TC-06",
+      "employee_id": "EMP-106",
+      "employee_name": "Amos Burton",
+      "department": "Support",
+      "submission_date": "2026-10-02",
+      "trip_purpose": "Customer Escalation in Denver",
+      "origin": "Denver Hotel",
+      "destination": "Downtown Tavern",
+      "justification_notes": "Solo dinner after resolving critical customer ticket.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-06",
+          "vendor": "Mile High Tavern",
+          "date": "2026-10-01",
+          "time": "20:00",
+          "category": "MEALS",
+          "subtotal": 100.00,
+          "tax": 10.00,
+          "tip": 20.00,
+          "total_amount": 130.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Burger & Fries", "amount": 55.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Single Malt Scotch", "amount": 25.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1},
+            {"description": "Bourbon Cocktail", "amount": 20.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 50.00,
+      "expected_violations": ["SEC-1.2", "SEC-1.1"],
+      "expected_policy_sections": ["SEC-1.2", "SEC-1.1"],
+      "notes": "Alcohol is $45 on $100 subtotal (45% > 20% cap; $25 excess). Remaining dinner total $105 exceeds $75 per diem cap by $25. Total disallowed = $50."
+    }
+  },
+  {
+    "case_id": "TC-07",
+    "slice": "clear_violations",
+    "description": "Solo dinner severely exceeds $75 daily per diem",
+    "report": {
+      "report_id": "EXP-TC-07",
+      "employee_id": "EMP-107",
+      "employee_name": "Alex Kamal",
+      "department": "Logistics",
+      "submission_date": "2026-10-03",
+      "trip_purpose": "Warehouse Inspection in Phoenix",
+      "origin": "Phoenix Hotel",
+      "destination": "Ruth's Chris Steak House",
+      "justification_notes": "Solo dinner during business trip.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-07",
+          "vendor": "Ruth's Chris Steak House",
+          "date": "2026-10-02",
+          "time": "19:15",
+          "category": "MEALS",
+          "subtotal": 115.00,
+          "tax": 11.50,
+          "tip": 23.00,
+          "total_amount": 149.50,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Cowboy Ribeye", "amount": 85.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Mashed Potatoes & Asparagus", "amount": 30.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 74.50,
+      "expected_violations": ["SEC-1.1"],
+      "expected_policy_sections": ["SEC-1.1"],
+      "notes": "Solo meal total is $149.50, which exceeds the $75.00 per diem by $74.50."
+    }
+  },
+  {
+    "case_id": "TC-08",
+    "slice": "clear_violations",
+    "description": "Unauthorized rideshare when subway is under 15 minutes",
+    "report": {
+      "report_id": "EXP-TC-08",
+      "employee_id": "EMP-108",
+      "employee_name": "Roberta Draper",
+      "department": "Security",
+      "submission_date": "2026-10-03",
+      "trip_purpose": "Quarterly Security Audit in Boston",
+      "origin": "Kendall Square",
+      "destination": "Downtown Crossing",
+      "justification_notes": "Took Uber because I preferred not to wait for the train. Subway takes 9 minutes on Red Line.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-08",
+          "vendor": "Uber Technologies",
+          "date": "2026-10-02",
+          "time": "15:30",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 24.00,
+          "tax": 0.0,
+          "tip": 4.00,
+          "total_amount": 28.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "UberX Kendall to Downtown", "amount": 24.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 28.00,
+      "expected_violations": ["SEC-2.1"],
+      "expected_policy_sections": ["SEC-2.1"],
+      "notes": "Public transit takes 9 minutes (<15 min). Entire $28.00 rideshare is disallowed."
+    }
+  },
+  {
+    "case_id": "TC-09",
+    "slice": "clear_violations",
+    "description": "Non-reimbursable hotel personal incidentals",
+    "report": {
+      "report_id": "EXP-TC-09",
+      "employee_id": "EMP-109",
+      "employee_name": "Chrisjen Avasarala",
+      "department": "Executive",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Annual Board Meeting in DC",
+      "origin": "DC Airport",
+      "destination": "The Willard Intercontinental",
+      "justification_notes": "Hotel stay and incidentals during board meeting.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-09",
+          "vendor": "The Willard Hotel",
+          "date": "2026-10-03",
+          "time": "10:00",
+          "category": "LODGING",
+          "subtotal": 290.00,
+          "tax": 43.50,
+          "tip": 0.0,
+          "total_amount": 333.50,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Standard Room Night", "amount": 245.00, "category": "LODGING", "is_alcohol": false, "quantity": 1},
+            {"description": "In-room Minibar Snacks & Spirits", "amount": 35.00, "category": "INCIDENTAL", "is_alcohol": true, "quantity": 1},
+            {"description": "Pay-per-view Movie Rental", "amount": 10.00, "category": "INCIDENTAL", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 45.00,
+      "expected_violations": ["SEC-4.2"],
+      "expected_policy_sections": ["SEC-4.2"],
+      "notes": "Minibar ($35) and movie rental ($10) are prohibited personal incidentals under SEC-4.2."
+    }
+  },
+  {
+    "case_id": "TC-10",
+    "slice": "clear_violations",
+    "description": "Excessive hotel room rate exceeding tier limit",
+    "report": {
+      "report_id": "EXP-TC-10",
+      "employee_id": "EMP-110",
+      "employee_name": "Fred Johnson",
+      "department": "Engineering",
+      "submission_date": "2026-10-05",
+      "trip_purpose": "Supplier meeting in Pittsburgh",
+      "origin": "Pittsburgh Airport",
+      "destination": "Luxury Hotel",
+      "justification_notes": "Hotel stay during supplier meetings.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-10",
+          "vendor": "Omni William Penn Hotel",
+          "date": "2026-10-04",
+          "time": "11:00",
+          "category": "LODGING",
+          "subtotal": 350.00,
+          "tax": 49.00,
+          "tip": 0.0,
+          "total_amount": 399.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Executive Suite 1 Night", "amount": 350.00, "category": "LODGING", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 150.00,
+      "expected_violations": ["SEC-4.1"],
+      "expected_policy_sections": ["SEC-4.1"],
+      "notes": "Pittsburgh is Tier 2 ($200 max rate). Rate was $350, exceeding cap by $150."
+    }
+  },
+  {
+    "case_id": "TC-11",
+    "slice": "transit_edge_cases",
+    "description": "Rideshare permitted under late-night exception (11:30 PM)",
+    "report": {
+      "report_id": "EXP-TC-11",
+      "employee_id": "EMP-111",
+      "employee_name": "Klaes Ashford",
+      "department": "Operations",
+      "submission_date": "2026-10-02",
+      "trip_purpose": "Production Deployment Support",
+      "origin": "Client Office",
+      "destination": "Hotel",
+      "justification_notes": "Late night deployment wrapped up at 23:15. Took Uber for safety as it was past 11 PM.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-11",
+          "vendor": "Uber Technologies",
+          "date": "2026-10-01",
+          "time": "23:30",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 22.00,
+          "tax": 0.0,
+          "tip": 4.00,
+          "total_amount": 26.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "UberX Late Night Ride", "amount": 22.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": ["SEC-2.2"],
+      "notes": "Travel at 23:30 falls within 22:00-06:00 late-night exception under SEC-2.2."
+    }
+  },
+  {
+    "case_id": "TC-12",
+    "slice": "transit_edge_cases",
+    "description": "Rideshare permitted under heavy equipment exception (>30 lbs)",
+    "report": {
+      "report_id": "EXP-TC-12",
+      "employee_id": "EMP-112",
+      "employee_name": "Clarissa Mao",
+      "department": "Marketing",
+      "submission_date": "2026-10-03",
+      "trip_purpose": "Tech Expo Booth Setup",
+      "origin": "Hotel",
+      "destination": "Convention Center",
+      "justification_notes": "Subway was 10 minutes away, but I was transporting 45 lbs of booth banner stands and audio equipment.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-12",
+          "vendor": "Lyft",
+          "date": "2026-10-02",
+          "time": "14:00",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 18.00,
+          "tax": 0.0,
+          "tip": 3.00,
+          "total_amount": 21.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Lyft XL Equipment Transport", "amount": 18.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": ["SEC-2.2"],
+      "notes": "Transporting 45 lbs equipment meets the >30 lbs heavy equipment exception under SEC-2.2."
+    }
+  },
+  {
+    "case_id": "TC-13",
+    "slice": "transit_edge_cases",
+    "description": "Invalid weather excuse for rideshare (mild rain when transit is 10 min)",
+    "report": {
+      "report_id": "EXP-TC-13",
+      "employee_id": "EMP-113",
+      "employee_name": "Anderson Dawes",
+      "department": "Sales",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Client Presentation",
+      "origin": "Hotel",
+      "destination": "Client Office",
+      "justification_notes": "Subway was 10 minutes away, but it was raining outside so I ordered an Uber.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-13",
+          "vendor": "Uber Technologies",
+          "date": "2026-10-03",
+          "time": "13:30",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 16.00,
+          "tax": 0.0,
+          "tip": 3.00,
+          "total_amount": 19.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "UberX Ride", "amount": 16.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 19.00,
+      "expected_violations": ["SEC-2.1"],
+      "expected_policy_sections": ["SEC-2.1"],
+      "notes": "Ordinary rain does not constitute severe weather emergency/transit outage. Entire fare disallowed."
+    }
+  },
+  {
+    "case_id": "TC-14",
+    "slice": "transit_edge_cases",
+    "description": "Rideshare boundary case where public transit is 14 minutes",
+    "report": {
+      "report_id": "EXP-TC-14",
+      "employee_id": "EMP-114",
+      "employee_name": "Camina Drummer",
+      "department": "Operations",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Site Audit",
+      "origin": "Station A",
+      "destination": "Facility B",
+      "justification_notes": "Transit schedule indicates 14 minute train ride. Took taxi instead.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-14",
+          "vendor": "City Taxi Cab",
+          "date": "2026-10-03",
+          "time": "16:00",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 21.00,
+          "tax": 0.0,
+          "tip": 4.00,
+          "total_amount": 25.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Cab Fare", "amount": 21.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 25.00,
+      "expected_violations": ["SEC-2.1"],
+      "expected_policy_sections": ["SEC-2.1"],
+      "notes": "14 minutes is strictly under 15 minutes. Non-compliant under SEC-2.1."
+    }
+  },
+  {
+    "case_id": "TC-15",
+    "slice": "transit_edge_cases",
+    "description": "Rideshare boundary case where public transit is 16 minutes",
+    "report": {
+      "report_id": "EXP-TC-15",
+      "employee_id": "EMP-115",
+      "employee_name": "Bobbie Draper",
+      "department": "Logistics",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Site Audit",
+      "origin": "Station A",
+      "destination": "Facility C",
+      "justification_notes": "Public transit route duration is 16 minutes. Rideshare taken.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-15",
+          "vendor": "Lyft",
+          "date": "2026-10-03",
+          "time": "16:30",
+          "category": "GROUND_TRANSIT",
+          "subtotal": 19.00,
+          "tax": 0.0,
+          "tip": 3.00,
+          "total_amount": 22.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Lyft Ride", "amount": 19.00, "category": "GROUND_TRANSIT", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "16 minutes is not under 15 minutes. Rideshare is compliant under SEC-2.1."
+    }
+  },
+  {
+    "case_id": "TC-16",
+    "slice": "client_entertainment_and_docs",
+    "description": "Client dinner missing attendee names and affiliations",
+    "report": {
+      "report_id": "EXP-TC-16",
+      "employee_id": "EMP-116",
+      "employee_name": "Praxidike Meng",
+      "department": "Research",
+      "submission_date": "2026-10-03",
+      "trip_purpose": "Partnership Exploration",
+      "origin": "Research Park",
+      "destination": "The Capital Grille",
+      "justification_notes": "Hosted prospective research partners for dinner to discuss collaborative trials.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-16",
+          "vendor": "The Capital Grille",
+          "date": "2026-10-02",
+          "time": "19:30",
+          "category": "CLIENT_ENTERTAINMENT",
+          "subtotal": 210.00,
+          "tax": 21.00,
+          "tip": 42.00,
+          "total_amount": 273.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Entrees & Sides for 3", "amount": 180.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Wine Bottle", "amount": 30.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "FLAGGED_FOR_REVIEW",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": ["SEC-3.1"],
+      "expected_policy_sections": ["SEC-3.1"],
+      "notes": "Missing mandatory attendee list under SEC-3.1. Flagged for review with remediation required."
+    }
+  },
+  {
+    "case_id": "TC-17",
+    "slice": "client_entertainment_and_docs",
+    "description": "Vague justification for expensive client hosting",
+    "report": {
+      "report_id": "EXP-TC-17",
+      "employee_id": "EMP-117",
+      "employee_name": "Sadavir Errinwright",
+      "department": "Strategy",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Client meeting",
+      "origin": "Offsite",
+      "destination": "Nobu",
+      "justification_notes": "Had dinner with client to discuss general business topics.",
+      "attendees": [
+        "Sadavir Errinwright (VP Strategy)",
+        "Jules Pierre (CEO, Protogen)"
+      ],
+      "receipts": [
+        {
+          "receipt_id": "REC-17",
+          "vendor": "Nobu Downtown",
+          "date": "2026-10-03",
+          "time": "20:00",
+          "category": "CLIENT_ENTERTAINMENT",
+          "subtotal": 220.00,
+          "tax": 22.00,
+          "tip": 44.00,
+          "total_amount": 286.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Omakase Platters", "amount": 220.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "FLAGGED_FOR_REVIEW",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": ["SEC-3.1"],
+      "expected_policy_sections": ["SEC-3.1"],
+      "notes": "Vague justification violates SEC-3.1 which prohibits 'general business' or 'discussed work'."
+    }
+  },
+  {
+    "case_id": "TC-18",
+    "slice": "client_entertainment_and_docs",
+    "description": "Non-itemized credit card charge slip for $75 meal",
+    "report": {
+      "report_id": "EXP-TC-18",
+      "employee_id": "EMP-118",
+      "employee_name": "Julie Mao",
+      "department": "Communications",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Press Briefing",
+      "origin": "Press Center",
+      "destination": "Brasserie",
+      "justification_notes": "Solo dinner after press conference.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-18",
+          "vendor": "Le Bistro Parisien",
+          "date": "2026-10-03",
+          "time": "20:30",
+          "category": "MEALS",
+          "subtotal": 60.00,
+          "tax": 5.00,
+          "tip": 10.00,
+          "total_amount": 75.00,
+          "currency": "USD",
+          "is_itemized": false,
+          "line_items": [],
+          "raw_text": "Visa Charge Slip: Total $75.00 Auth #991823"
+        }
+      ]
+    },
+    "expected": {
+      "status": "FLAGGED_FOR_REVIEW",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": ["SEC-1.3"],
+      "expected_policy_sections": ["SEC-1.3"],
+      "notes": "Meal is >$25 but receipt is non-itemized. Must be flagged under SEC-1.3."
+    }
+  },
+  {
+    "case_id": "TC-19",
+    "slice": "client_entertainment_and_docs",
+    "description": "Non-itemized receipt for $18 meal (Compliant because under $25 threshold)",
+    "report": {
+      "report_id": "EXP-TC-19",
+      "employee_id": "EMP-119",
+      "employee_name": "Dimitri Havelock",
+      "department": "Security",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Field Investigation",
+      "origin": "Station",
+      "destination": "Quick Cafe",
+      "justification_notes": "Quick lunch on travel day.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-19",
+          "vendor": "Corner Deli",
+          "date": "2026-10-03",
+          "time": "12:30",
+          "category": "MEALS",
+          "subtotal": 16.00,
+          "tax": 1.50,
+          "tip": 0.50,
+          "total_amount": 18.00,
+          "currency": "USD",
+          "is_itemized": false,
+          "line_items": [],
+          "raw_text": "Card Slip: Total $18.00"
+        }
+      ]
+    },
+    "expected": {
+      "status": "APPROVED",
+      "expected_disallowed_amount": 0.0,
+      "expected_violations": [],
+      "expected_policy_sections": [],
+      "notes": "Itemized receipt only required for meals > $25 under SEC-1.3. $18 is compliant."
+    }
+  },
+  {
+    "case_id": "TC-20",
+    "slice": "client_entertainment_and_docs",
+    "description": "Client entertainment exceeding $150 per person limit",
+    "report": {
+      "report_id": "EXP-TC-20",
+      "employee_id": "EMP-120",
+      "employee_name": "Cotyar Ghazi",
+      "department": "Executive",
+      "submission_date": "2026-10-05",
+      "trip_purpose": "Strategic Alliance Dinner",
+      "origin": "HQ",
+      "destination": "Per Se",
+      "justification_notes": "Dinner with key strategic partner to discuss merger opportunity.",
+      "attendees": [
+        "Cotyar Ghazi (Chief of Staff)",
+        "Marco Inaros (Managing Director, Free Navy Ventures)"
+      ],
+      "receipts": [
+        {
+          "receipt_id": "REC-20",
+          "vendor": "Per Se",
+          "date": "2026-10-04",
+          "time": "19:30",
+          "category": "CLIENT_ENTERTAINMENT",
+          "subtotal": 350.00,
+          "tax": 35.00,
+          "tip": 70.00,
+          "total_amount": 455.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Tasting Menus (2 persons)", "amount": 350.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 155.00,
+      "expected_violations": ["SEC-3.2"],
+      "expected_policy_sections": ["SEC-3.2"],
+      "notes": "2 attendees allows max $300 ($150/person). Total claimed is $455. Over cap by $155."
+    }
+  },
+  {
+    "case_id": "TC-21",
+    "slice": "subtle_evasions_and_math",
+    "description": "Split receipt evasion on same day at same restaurant totaling over per diem",
+    "report": {
+      "report_id": "EXP-TC-21",
+      "employee_id": "EMP-121",
+      "employee_name": "Diogo Harari",
+      "department": "Logistics",
+      "submission_date": "2026-10-05",
+      "trip_purpose": "Depot Inspection",
+      "origin": "Depot",
+      "destination": "Trattoria",
+      "justification_notes": "Dinner while on travel assignment.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-21A",
+          "vendor": "Luigi's Trattoria",
+          "date": "2026-10-04",
+          "time": "19:15",
+          "category": "MEALS",
+          "subtotal": 45.00,
+          "tax": 4.50,
+          "tip": 5.00,
+          "total_amount": 54.50,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Pasta Course & Appetizer", "amount": 45.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        },
+        {
+          "receipt_id": "REC-21B",
+          "vendor": "Luigi's Trattoria",
+          "date": "2026-10-04",
+          "time": "20:00",
+          "category": "MEALS",
+          "subtotal": 40.00,
+          "tax": 4.00,
+          "tip": 5.00,
+          "total_amount": 49.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Meat Entree & Dessert", "amount": 40.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 28.50,
+      "expected_violations": ["SEC-1.1", "SEC-5.1"],
+      "expected_policy_sections": ["SEC-1.1", "SEC-5.1"],
+      "notes": "Two split receipts at same venue totaling $103.50 on same day. Violates SEC-5.1 (splitting) and SEC-1.1 ($75 cap exceeded by $28.50)."
+    }
+  },
+  {
+    "case_id": "TC-22",
+    "slice": "subtle_evasions_and_math",
+    "description": "Disguised alcohol as Specialty Refreshment exceeding 20% cap",
+    "report": {
+      "report_id": "EXP-TC-22",
+      "employee_id": "EMP-122",
+      "employee_name": "Octavia Muss",
+      "department": "Legal",
+      "submission_date": "2026-10-05",
+      "trip_purpose": "Court deposition",
+      "origin": "Courthouse",
+      "destination": "Lounge",
+      "justification_notes": "Solo dinner after day in court.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-22",
+          "vendor": "Velvet Lounge & Grill",
+          "date": "2026-10-04",
+          "time": "20:30",
+          "category": "MEALS",
+          "subtotal": 70.00,
+          "tax": 7.00,
+          "tip": 14.00,
+          "total_amount": 91.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Steak Frites", "amount": 40.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Artisanal Botanical Craft Spirits", "amount": 30.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 16.00,
+      "expected_violations": ["SEC-1.2"],
+      "expected_policy_sections": ["SEC-1.2"],
+      "notes": "Alcohol is $30 on $70 subtotal (42.8% > 20% cap = $14 max). Alcohol overage = $16 disallowed."
+    }
+  },
+  {
+    "case_id": "TC-23",
+    "slice": "subtle_evasions_and_math",
+    "description": "Solo breakfast including alcohol (100% disallowed)",
+    "report": {
+      "report_id": "EXP-TC-23",
+      "employee_id": "EMP-123",
+      "employee_name": "Anderson Miller",
+      "department": "Finance",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Financial Audit",
+      "origin": "Hotel",
+      "destination": "Breakfast Cafe",
+      "justification_notes": "Solo breakfast before audit meeting.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-23",
+          "vendor": "Morning Star Cafe",
+          "date": "2026-10-03",
+          "time": "08:15",
+          "category": "MEALS",
+          "subtotal": 24.00,
+          "tax": 2.40,
+          "tip": 4.60,
+          "total_amount": 31.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Eggs Benedict", "amount": 16.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "Mimosa Cocktail", "amount": 8.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 8.00,
+      "expected_violations": ["SEC-1.2"],
+      "expected_policy_sections": ["SEC-1.2"],
+      "notes": "Alcohol during solo breakfast is strictly 100% disallowed under SEC-1.2."
+    }
+  },
+  {
+    "case_id": "TC-24",
+    "slice": "subtle_evasions_and_math",
+    "description": "Solo lunch with beer (100% disallowed under solo lunch policy)",
+    "report": {
+      "report_id": "EXP-TC-24",
+      "employee_id": "EMP-124",
+      "employee_name": "Bull de Geest",
+      "department": "Engineering",
+      "submission_date": "2026-10-04",
+      "trip_purpose": "Vendor Quality Audit",
+      "origin": "Plant",
+      "destination": "Diner",
+      "justification_notes": "Solo lunch break during plant audit.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-24",
+          "vendor": "Bavarian Haus",
+          "date": "2026-10-03",
+          "time": "12:45",
+          "category": "MEALS",
+          "subtotal": 28.00,
+          "tax": 2.80,
+          "tip": 5.00,
+          "total_amount": 35.80,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Bratwurst & Sauerkraut", "amount": 19.00, "category": "MEALS", "is_alcohol": false, "quantity": 1},
+            {"description": "German Pilsner Draft", "amount": 9.00, "category": "ALCOHOL", "is_alcohol": true, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 9.00,
+      "expected_violations": ["SEC-1.2"],
+      "expected_policy_sections": ["SEC-1.2"],
+      "notes": "Alcohol at solo lunch is 100% disallowed under SEC-1.2 ($9.00 disallowed)."
+    }
+  },
+  {
+    "case_id": "TC-25",
+    "slice": "subtle_evasions_and_math",
+    "description": "Multi-meal day where combined breakfast lunch dinner exceeds $75 per diem",
+    "report": {
+      "report_id": "EXP-TC-25",
+      "employee_id": "EMP-125",
+      "employee_name": "Ashford Drake",
+      "department": "Sales",
+      "submission_date": "2026-10-05",
+      "trip_purpose": "Conference Attendance",
+      "origin": "Conference Hotel",
+      "destination": "Various",
+      "justification_notes": "All meals during full day at conference.",
+      "attendees": [],
+      "receipts": [
+        {
+          "receipt_id": "REC-25A",
+          "vendor": "Hotel Breakfast",
+          "date": "2026-10-04",
+          "time": "08:00",
+          "category": "MEALS",
+          "subtotal": 20.00,
+          "tax": 2.00,
+          "tip": 3.00,
+          "total_amount": 25.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Buffet Breakfast", "amount": 20.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        },
+        {
+          "receipt_id": "REC-25B",
+          "vendor": "Convention Center Cafe",
+          "date": "2026-10-04",
+          "time": "12:30",
+          "category": "MEALS",
+          "subtotal": 24.00,
+          "tax": 2.40,
+          "tip": 3.60,
+          "total_amount": 30.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Sandwich Combo", "amount": 24.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        },
+        {
+          "receipt_id": "REC-25C",
+          "vendor": "Downtown Grill",
+          "date": "2026-10-04",
+          "time": "19:00",
+          "category": "MEALS",
+          "subtotal": 35.00,
+          "tax": 3.50,
+          "tip": 6.50,
+          "total_amount": 45.00,
+          "currency": "USD",
+          "is_itemized": true,
+          "line_items": [
+            {"description": "Salmon Dinner", "amount": 35.00, "category": "MEALS", "is_alcohol": false, "quantity": 1}
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "status": "REJECTED",
+      "expected_disallowed_amount": 25.00,
+      "expected_violations": ["SEC-1.1"],
+      "expected_policy_sections": ["SEC-1.1"],
+      "notes": "Three meals total $100.00 on the same day ($25+$30+$45). Exceeds $75 daily per diem by $25.00."
+    }
+  }
+]

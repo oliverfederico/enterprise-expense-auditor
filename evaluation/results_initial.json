@@ -1,0 +1,1469 @@
+{
+  "total_cases": 25,
+  "execution_time_seconds": 478.46,
+  "metrics": {
+    "status_accuracy": 1.0,
+    "disallowed_amount_accuracy": 0.88,
+    "citation_recall": 1.0,
+    "overall_pass_rate": 0.88,
+    "llm_judge_groundedness_avg": 4.92,
+    "llm_judge_actionability_avg": 5.0,
+    "llm_judge_agreement_rate": 0.96
+  },
+  "slice_analysis": {
+    "clean_compliant": {
+      "total": 5,
+      "status_pass": 5,
+      "amount_pass": 5,
+      "overall_pass": 5
+    },
+    "clear_violations": {
+      "total": 5,
+      "status_pass": 5,
+      "amount_pass": 3,
+      "overall_pass": 3
+    },
+    "transit_edge_cases": {
+      "total": 5,
+      "status_pass": 5,
+      "amount_pass": 5,
+      "overall_pass": 5
+    },
+    "client_entertainment_and_docs": {
+      "total": 5,
+      "status_pass": 5,
+      "amount_pass": 4,
+      "overall_pass": 4
+    },
+    "subtle_evasions_and_math": {
+      "total": 5,
+      "status_pass": 5,
+      "amount_pass": 5,
+      "overall_pass": 5
+    }
+  },
+  "details": [
+    {
+      "case_id": "TC-01",
+      "slice": "clean_compliant",
+      "description": "Standard individual dinner well under per diem cap",
+      "deterministic": {
+        "case_id": "TC-01",
+        "slice": "clean_compliant",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-01",
+        "status": "APPROVED",
+        "total_claimed": 45.0,
+        "approved_amount": 45.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day.",
+            "explanation": "Total meal expense of $45.00 is within the $75.00 daily cap."
+          },
+          {
+            "section_id": "SEC-1.3",
+            "title": "Itemized Receipt Documentation",
+            "relevant_clause": "An itemized receipt showing detailed individual line items, quantities, and prices is mandatory for all meal expenses exceeding $25.00. Gratuity (tip) is reimbursable up to a maximum of 20% of the pre-tax bill.",
+            "explanation": "An itemized receipt was submitted and the tip of $6.50 does not exceed 20% of the $35.00 pre-tax subtotal ($7.00 max)."
+          }
+        ],
+        "audit_summary": "The solo travel dinner expense of $45.00 at Pike Place Chowder is fully compliant with company policy, including daily per diem limits, tip guidelines, and itemization requirements.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly approved the compliant expense. The claimed amount of $45.00 is well below the standard $75 per diem cap, fully itemized, adheres to tipping rules, and contains no alcohol. With no policy violations identified, stating 'None' for remediation steps is appropriate and accurate."
+      }
+    },
+    {
+      "case_id": "TC-02",
+      "slice": "clean_compliant",
+      "description": "Public subway commute between meetings",
+      "deterministic": {
+        "case_id": "TC-02",
+        "slice": "clean_compliant",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-02",
+        "status": "APPROVED",
+        "total_claimed": 2.9,
+        "approved_amount": 2.9,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-2.1",
+            "title": "Public Transit Preference & Rideshare Limitation",
+            "relevant_clause": "Employees are expected to utilize public transit (subway, metro, light rail, commuter train, or bus) for ground transportation whenever practical.",
+            "explanation": "The expense adheres strictly to the public transit preference policy by utilizing the subway for ground travel between corporate office locations."
+          }
+        ],
+        "audit_summary": "The expense claim of $2.90 for an MTA subway ride between Midtown and Financial District office locations is fully compliant with SEC-2.1 ground transportation policy. Approved in full.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor accurately referenced SEC-2.1 regarding ground transportation and correctly approved the subway expense between business locations. Since the expense was fully compliant and approved, having no remediation steps is appropriate."
+      }
+    },
+    {
+      "case_id": "TC-03",
+      "slice": "clean_compliant",
+      "description": "Compliant client dinner with 3 attendees and full details",
+      "deterministic": {
+        "case_id": "TC-03",
+        "slice": "clean_compliant",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-03",
+        "status": "APPROVED",
+        "total_claimed": 260.0,
+        "approved_amount": 260.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-3.1",
+            "title": "Documentation & Attendee Requirements",
+            "relevant_clause": "Client entertainment expenses require full documentation: full names, professional titles, and company affiliations of all attendees, along with a specific, substantive business justification articulating commercial purpose.",
+            "explanation": "All three attendees (internal and external) are fully documented with names, titles, and affiliations, and a clear business purpose was provided."
+          },
+          {
+            "section_id": "SEC-3.2",
+            "title": "Per-Person Spending Cap",
+            "relevant_clause": "Client entertainment meals are subject to a maximum cap of $150.00 per attendee (inclusive of food, drinks, tax, and tip).",
+            "explanation": "The total expense of $260.00 for 3 attendees averages $86.67 per person, well under the $150.00 per person maximum."
+          },
+          {
+            "section_id": "SEC-1.2",
+            "title": "Alcohol Policy",
+            "relevant_clause": "For eligible dinners, total alcohol charges (including beer, wine, cocktails, and liquor) must not exceed 20% of the meal subtotal (pre-tax, pre-tip).",
+            "explanation": "Alcohol expenditure ($35.00 for wine) complies with the allowable 20% threshold of the meal subtotal ($40.00 cap on a $200.00 subtotal)."
+          },
+          {
+            "section_id": "SEC-1.3",
+            "title": "Itemized Receipt Documentation",
+            "relevant_clause": "An itemized receipt showing detailed individual line items, quantities, and prices is mandatory for all meal expenses exceeding $25.00. Gratuity (tip) is reimbursable up to a maximum of 20% of the pre-tax bill.",
+            "explanation": "An itemized receipt was submitted, and gratuity of $40.00 represents exactly 20% of the pre-tax bill."
+          }
+        ],
+        "audit_summary": "The expense report is fully compliant with company T&E policy. All attendee details and business justification are provided, expenditures per person are within policy thresholds, alcohol charges are within the 20% limit, and gratuity does not exceed 20%. Approved for full reimbursement of $260.00.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor accurately verified all core requirements of the T&E policy, including per-person spend thresholds, attendee documentation, and alcohol percentage caps. Because the expense is fully compliant and approved without disallowance, stating 'None' for remediation steps is appropriate."
+      }
+    },
+    {
+      "case_id": "TC-04",
+      "slice": "clean_compliant",
+      "description": "Standard corporate hotel room under city tier rate",
+      "deterministic": {
+        "case_id": "TC-04",
+        "slice": "clean_compliant",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-04",
+        "status": "APPROVED",
+        "total_claimed": 201.25,
+        "approved_amount": 201.25,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-4.1",
+            "title": "Lodging Rate Limits",
+            "relevant_clause": "Maximum allowable room rates: All Other Cities: $200.00 / night (pre-tax).",
+            "explanation": "The hotel room was booked in Austin at a pre-tax nightly rate of $175.00, which is within the $200.00 allowable limit for non-Tier 1 cities."
+          }
+        ],
+        "audit_summary": "The expense report is fully compliant. The lodging charge at Hyatt Place Austin has a pre-tax room rate of $175.00, which is below the $200.00/night limit for non-Tier 1 cities, and proper itemization was provided.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly evaluated the lodging expense by checking the pre-tax room rate of $175 against the applicable $200 Tier 2 nightly cap. The decision aligns completely with the ground truth expected outcome, with no extraneous violations flagged and no remediation required."
+      }
+    },
+    {
+      "case_id": "TC-05",
+      "slice": "clean_compliant",
+      "description": "Rideshare permitted because public transit takes 35 minutes",
+      "deterministic": {
+        "case_id": "TC-05",
+        "slice": "clean_compliant",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-05",
+        "status": "APPROVED",
+        "total_claimed": 37.0,
+        "approved_amount": 37.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-2.1",
+            "title": "Public Transit Preference & Rideshare Limitation",
+            "relevant_clause": "Rideshare services (e.g., Uber, Lyft, taxi, private car) are strictly disallowed if public transit transit time between origin and destination is under 15 minutes.",
+            "explanation": "Public transit route exceeds 15 minutes (documented at 35 minutes), making rideshare usage fully allowable under policy."
+          },
+          {
+            "section_id": "SEC-5.2",
+            "title": "Trip Date & Route Alignment",
+            "relevant_clause": "Transportation receipts must align with documented business destinations and itineraries.",
+            "explanation": "The ground transit route from Hotel Downtown to the Suburban Data Center directly matches the documented business purpose of Data Center Maintenance."
+          }
+        ],
+        "audit_summary": "The expense report is fully compliant with travel and ground transit policies. The public transit duration to the remote site is 35 minutes (exceeding the 15-minute threshold), justifying rideshare usage, and the receipt is fully itemized.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly approved the claim in accordance with ground transportation policy. The public transit time of 35 minutes exceeds the 15-minute policy threshold, making rideshare an allowable expense. Because the expense was fully compliant and approved, no remediation was necessary, and stating 'None' is appropriate."
+      }
+    },
+    {
+      "case_id": "TC-06",
+      "slice": "clear_violations",
+      "description": "Alcohol exceeds 20% cap on dinner subtotal",
+      "deterministic": {
+        "case_id": "TC-06",
+        "slice": "clear_violations",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 55.0,
+        "expected_disallowed": 55.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-06",
+        "status": "REJECTED",
+        "total_claimed": 130.0,
+        "approved_amount": 75.0,
+        "disallowed_amount": 55.0,
+        "violations": [
+          {
+            "rule_id": "VIO-ALCOHOL-CAP",
+            "policy_section": "SEC-1.2: Alcohol Policy",
+            "severity": "HARD_VIOLATION",
+            "description": "Alcohol expenditure exceeds the allowable 20% cap of the meal subtotal.",
+            "evidence": "Single Malt Scotch ($25.00) and Bourbon Cocktail ($20.00) total $45.00, which is 45% of the $100.00 subtotal, exceeding the $20.00 allowable maximum by $25.00.",
+            "disallowed_amount": 25.0
+          },
+          {
+            "rule_id": "VIO-DAILY-PER-DIEM",
+            "policy_section": "SEC-1.1: Daily Per Diem Limit",
+            "severity": "HARD_VIOLATION",
+            "description": "Total daily meal reimbursement claim exceeds the strict $75.00 per diem limit for individual business travel.",
+            "evidence": "Receipt total of $130.00 on 2026-10-01 exceeds the $75.00 daily cap by $55.00 ($30.00 non-reimbursable after disallowing $25.00 in excess alcohol).",
+            "disallowed_amount": 30.0
+          }
+        ],
+        "remediation_steps": [
+          "Accept the reimbursement adjustment reducing the approved amount to the maximum allowable $75.00 daily per diem limit.",
+          "For future expense reports, ensure that alcohol charges do not exceed 20% of the pre-tax meal subtotal and total daily meals remain within the $75.00 per diem cap."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day. Any cumulative meal expenditure exceeding $75.00 on a single day is non-reimbursable for the excess amount.",
+            "explanation": "The total claim of $130.00 exceeds the $75.00 cap, limiting maximum reimbursement for the calendar day to $75.00."
+          },
+          {
+            "section_id": "SEC-1.2",
+            "title": "Alcohol Policy",
+            "relevant_clause": "For eligible dinners, total alcohol charges (including beer, wine, cocktails, and liquor) must not exceed 20% of the meal subtotal (pre-tax, pre-tip). Any alcohol expenditure exceeding the 20% cap is disallowable and will be deducted from the reimbursement total.",
+            "explanation": "Alcohol charges totaled $45.00 on a $100.00 subtotal, exceeding the 20% ($20.00) limit by $25.00."
+          }
+        ],
+        "audit_summary": "The expense report contains policy violations regarding alcohol spending limits and the daily meal per diem cap. Alcohol charges accounted for 45% of the subtotal against the 20% maximum cap ($25.00 disallowed), and the total meal cost exceeded the $75.00 individual daily limit (further $30.00 disallowed). The report is rejected for the full claimed amount and adjusted to the allowable $75.00 cap.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor executed the complex calculation flawlessly, correctly sequencing the disallowances by first removing the $25.00 excess alcohol cost (over the 20% subtotal threshold) and subsequently trimming the remaining $105.00 meal cost by $30.00 to adhere to the hard $75.00 daily per diem cap. The remediation instructions clearly explain the adjustments and outline preventative guidance for future submissions without ambiguity."
+      }
+    },
+    {
+      "case_id": "TC-07",
+      "slice": "clear_violations",
+      "description": "Solo dinner severely exceeds $75 daily per diem",
+      "deterministic": {
+        "case_id": "TC-07",
+        "slice": "clear_violations",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 74.5,
+        "expected_disallowed": 74.5,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-07",
+        "status": "REJECTED",
+        "total_claimed": 149.5,
+        "approved_amount": 75.0,
+        "disallowed_amount": 74.5,
+        "violations": [
+          {
+            "rule_id": "VIO-DAILY-PER-DIEM",
+            "policy_section": "SEC-1.1: Daily Per Diem Limit",
+            "severity": "HARD_VIOLATION",
+            "description": "The cumulative meal expense for an individual business travel day exceeded the mandatory $75.00 daily per diem cap.",
+            "evidence": "Receipt REC-07 for a solo dinner at Ruth's Chris Steak House on 2026-10-02 totaled $149.50 ($115.00 subtotal + $11.50 tax + $23.00 tip), which exceeds the $75.00 limit by $74.50.",
+            "disallowed_amount": 74.5
+          }
+        ],
+        "remediation_steps": [
+          "Acknowledge the company's $75.00 daily per diem limit for individual meals.",
+          "Adjust the expense report to claim only the allowable $75.00 limit, absorbing the $74.50 excess as a personal expense."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day. Any cumulative meal expenditure exceeding $75.00 on a single day is non-reimbursable for the excess amount.",
+            "explanation": "Solo meals are capped at $75.00 per calendar day. The submitted dinner total of $149.50 exceeds this cap, resulting in $74.50 being disallowed."
+          }
+        ],
+        "audit_summary": "Expense report EXP-TC-07 is rejected due to a hard policy violation under SEC-1.1. The employee submitted a solo dinner totaling $149.50, exceeding the $75.00 daily per diem limit by $74.50. The allowable reimbursement is capped at $75.00.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor's decision is entirely grounded in the applicable T&E policy regarding daily per diem caps. The calculation of $74.50 as disallowed overage is accurate, correctly capping the approved reimbursable amount at $75.00. The remediation guidance is polite, clear, and gives the employee precise instructions on how to adjust their expense report to designate the remainder as personal expense."
+      }
+    },
+    {
+      "case_id": "TC-08",
+      "slice": "clear_violations",
+      "description": "Unauthorized rideshare when subway is under 15 minutes",
+      "deterministic": {
+        "case_id": "TC-08",
+        "slice": "clear_violations",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 28.0,
+        "expected_disallowed": 28.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-08",
+        "status": "REJECTED",
+        "total_claimed": 28.0,
+        "approved_amount": 0.0,
+        "disallowed_amount": 28.0,
+        "violations": [
+          {
+            "rule_id": "VIO-RIDESHARE-TRANSIT-AVAILABLE",
+            "policy_section": "SEC-2.1: Public Transit Preference & Rideshare Limitation",
+            "severity": "HARD_VIOLATION",
+            "description": "Rideshare services are strictly prohibited when public transit travel time is under 15 minutes unless an approved exception applies.",
+            "evidence": "Employee explicitly noted that the subway transit time on the Red Line is 9 minutes, and chose Uber at 15:30 due to personal preference rather than an approved exception.",
+            "disallowed_amount": 28.0
+          }
+        ],
+        "remediation_steps": [
+          "In the future, utilize public transit when transit time is under 15 minutes as mandated by SEC-2.1.",
+          "If an unlisted exception applied (e.g., transporting heavy security equipment exceeding 30 lbs or severe documented transit outage), provide official supporting documentation and resubmit for managerial review."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-2.1",
+            "title": "Public Transit Preference & Rideshare Limitation",
+            "relevant_clause": "Rideshare services (e.g., Uber, Lyft, taxi, private car) are strictly disallowed if public transit transit time between origin and destination is under 15 minutes. If public transit is under 15 minutes and rideshare is used without a documented approved exception, the entire rideshare fare is non-reimbursable.",
+            "explanation": "The Red Line subway travel time between Kendall Square and Downtown Crossing is 9 minutes (under the 15-minute threshold)."
+          },
+          {
+            "section_id": "SEC-2.2",
+            "title": "Approved Ground Transit Exceptions",
+            "relevant_clause": "Rideshare is permitted even when public transit is under 15 minutes ONLY under the following documented conditions: Late-Night Travel (10:00 PM to 6:00 AM), Heavy Equipment / Materials exceeding 30 lbs, or Severe Weather / Safety Hazards.",
+            "explanation": "The trip took place at 15:30 and no valid exception was cited or documented."
+          }
+        ],
+        "audit_summary": "The expense claim for the $28.00 Uber ride has been rejected. Under SEC-2.1, rideshares are non-reimbursable when public transit is under 15 minutes. The employee documented that public transit takes 9 minutes, and no eligible exceptions under SEC-2.2 applied.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor's decision is fully grounded in the provided policy framework and matches the ground truth outcome exactly. The full $28.00 rideshare charge was properly disallowed due to public transit taking 9 minutes (under the 15-minute threshold). The remediation steps are polite, constructive, and specify exact alternative conditions and documentation necessary should an exception apply."
+      }
+    },
+    {
+      "case_id": "TC-09",
+      "slice": "clear_violations",
+      "description": "Non-reimbursable hotel personal incidentals",
+      "deterministic": {
+        "case_id": "TC-09",
+        "slice": "clear_violations",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": false,
+        "disallowed_error": 45.0,
+        "predicted_disallowed": 90.0,
+        "expected_disallowed": 45.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": false
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-09",
+        "status": "REJECTED",
+        "total_claimed": 333.5,
+        "approved_amount": 243.5,
+        "disallowed_amount": 90.0,
+        "violations": [
+          {
+            "rule_id": "VIO-LODGING-RATE",
+            "policy_section": "SEC-4.1: Lodging Rate Limits",
+            "severity": "HARD_VIOLATION",
+            "description": "The room rate of $245.00/night exceeds the maximum allowable pre-tax rate of $200.00/night for non-Tier 1 cities.",
+            "evidence": "The Willard Hotel in Washington DC billed at $245.00/night pre-tax; Washington DC is categorized under All Other Cities with a $200.00 cap.",
+            "disallowed_amount": 45.0
+          },
+          {
+            "rule_id": "VIO-PERSONAL-INCIDENTAL-MINIBAR",
+            "policy_section": "SEC-4.2: Non-Reimbursable Personal Incidentals",
+            "severity": "HARD_VIOLATION",
+            "description": "In-room minibar snacks and alcoholic beverages charged to hotel folios are strictly non-reimbursable.",
+            "evidence": "Receipt line item: 'In-room Minibar Snacks & Spirits: $35.00 [ALCOHOL]'.",
+            "disallowed_amount": 35.0
+          },
+          {
+            "rule_id": "VIO-PERSONAL-INCIDENTAL-MOVIES",
+            "policy_section": "SEC-4.2: Non-Reimbursable Personal Incidentals",
+            "severity": "HARD_VIOLATION",
+            "description": "In-room entertainment and pay-per-view movie rentals charged to hotel folios are non-reimbursable personal incidentals.",
+            "evidence": "Receipt line item: 'Pay-per-view Movie Rental: $10.00'.",
+            "disallowed_amount": 10.0
+          }
+        ],
+        "remediation_steps": [
+          "Deduct the $35.00 minibar charge and the $10.00 pay-per-view movie rental as personal incidentals.",
+          "Adjust the lodging room rate reimbursement to the $200.00/night cap for non-Tier 1 locations.",
+          "Resubmit the expense report for the approved lodging amount of $243.50."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-4.1",
+            "title": "Lodging Rate Limits",
+            "relevant_clause": "Tier 1 Cities (New York, San Francisco, London, Tokyo): $300.00 / night (pre-tax). All Other Cities: $200.00 / night (pre-tax).",
+            "explanation": "Washington DC falls under All Other Cities, capping room reimbursement at $200.00 pre-tax per night."
+          },
+          {
+            "section_id": "SEC-4.2",
+            "title": "Non-Reimbursable Personal Incidentals",
+            "relevant_clause": "Personal incidentals charged to hotel folios are strictly non-reimbursable and must be removed prior to submission. Prohibited items include: in-room minibar snacks/drinks, pay-per-view movies, spa/gym personal treatments, laundry for trips under 4 days, and dry cleaning.",
+            "explanation": "Minibar and movie rental charges must be removed from the claim prior to reimbursement."
+          }
+        ],
+        "audit_summary": "The expense report is rejected due to policy violations under SEC-4.1 and SEC-4.2. Washington DC is subject to the $200.00 pre-tax nightly rate cap (resulting in a $45.00 disallowance), and personal incidentals totaling $45.00 ($35.00 minibar and $10.00 pay-per-view movie) are non-reimbursable. Total disallowed is $90.00, approving $243.50.",
+        "confidence_score": 0.98
+      },
+      "judge": {
+        "policy_groundedness_score": 3,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": false,
+        "judge_critique": "The auditor properly identified and cited SEC-4.2 regarding personal incidentals ($35 minibar and $10 movie rental). However, the auditor inappropriately disallowed an additional $45 under SEC-4.1 by categorizing Washington, D.C. as a non-Tier 1 city subject to a $200 cap, which contradicts the ground truth expectation that solely focused on the $45 personal incidentals. Remediation instructions are clear, actionable, and polite."
+      }
+    },
+    {
+      "case_id": "TC-10",
+      "slice": "clear_violations",
+      "description": "Excessive hotel room rate exceeding tier limit",
+      "deterministic": {
+        "case_id": "TC-10",
+        "slice": "clear_violations",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": false,
+        "disallowed_error": 21.0,
+        "predicted_disallowed": 171.0,
+        "expected_disallowed": 150.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": false
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-10",
+        "status": "REJECTED",
+        "total_claimed": 399.0,
+        "approved_amount": 228.0,
+        "disallowed_amount": 171.0,
+        "violations": [
+          {
+            "rule_id": "VIO-LODGING-CAP",
+            "policy_section": "SEC-4.1: Lodging Rate Limits",
+            "severity": "HARD_VIOLATION",
+            "description": "The nightly lodging rate in Pittsburgh ($350.00 pre-tax) exceeds the maximum allowable non-Tier 1 nightly cap of $200.00 pre-tax. Additionally, an Executive Suite was booked instead of a standard single room.",
+            "evidence": "Receipt #1 from Omni William Penn Hotel shows Executive Suite 1 Night at $350.00 pre-tax ($399.00 total with $49.00 tax). Pittsburgh is a non-Tier 1 city subject to the $200.00/night limit.",
+            "disallowed_amount": 171.0
+          }
+        ],
+        "remediation_steps": [
+          "Resubmit the expense report with the nightly lodging rate adjusted to the allowable $200.00 cap plus proportional tax ($28.00), totaling $228.00.",
+          "If the Executive Suite or higher rate was pre-authorized due to exceptional circumstances or standard room unavailability, attach written approval from your department head or travel manager.",
+          "Book standard single-room corporate rates within policy limits for future travel."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-4.1",
+            "title": "Lodging Rate Limits",
+            "relevant_clause": "Hotel accommodations must be booked at standard single-room corporate rates. Maximum allowable room rates: Tier 1 Cities (New York, San Francisco, London, Tokyo): $300.00 / night (pre-tax). All Other Cities: $200.00 / night (pre-tax).",
+            "explanation": "Pittsburgh is classified under All Other Cities, capping reimbursable hotel rates at $200.00 pre-tax per night."
+          }
+        ],
+        "audit_summary": "The claim was rejected due to a non-compliant hotel booking at the Omni William Penn Hotel in Pittsburgh. The employee booked an Executive Suite at $350.00 pre-tax per night, which violates SEC-4.1 requiring standard single-room bookings and exceeding the $200.00 pre-tax nightly rate cap for non-Tier 1 cities. The excess room rate of $150.00 plus proportional tax of $21.00 ($171.00 total) has been disallowed, leaving $228.00 eligible for reimbursement.",
+        "confidence_score": 0.98
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor's assessment is completely accurate and aligned with the ground truth policy. The auditor correctly identified Pittsburgh as a non-Tier 1 / Tier 2 location with a $200 pre-tax nightly lodging cap, identified the $150 overage on the $350 room rate, and properly handled proportional tax allocation ($21 disallowed tax, $28 approved tax). Furthermore, the auditor correctly flagged the unapproved Executive Suite booking. The remediation instructions are precise, actionable, and clearly outline the necessary documentation if an exception was pre-authorized."
+      }
+    },
+    {
+      "case_id": "TC-11",
+      "slice": "transit_edge_cases",
+      "description": "Rideshare permitted under late-night exception (11:30 PM)",
+      "deterministic": {
+        "case_id": "TC-11",
+        "slice": "transit_edge_cases",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-11",
+        "status": "APPROVED",
+        "total_claimed": 26.0,
+        "approved_amount": 26.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-2.2",
+            "title": "Approved Ground Transit Exceptions",
+            "relevant_clause": "Travel occurring between 10:00 PM (22:00) and 6:00 AM (06:00) for personal safety is an approved exception for rideshare usage, provided an explicit justification note is submitted.",
+            "explanation": "The Uber ride occurred at 23:30 (11:30 PM), which falls within the approved late-night travel window (10:00 PM to 6:00 AM). The employee provided the required justification note referencing personal safety after a late deployment."
+          }
+        ],
+        "audit_summary": "The expense report is fully compliant. The rideshare expense incurred at 23:30 meets the criteria for late-night travel under SEC-2.2, with an appropriate justification note provided. The total amount of $26.00 is approved for reimbursement.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly identified that the 23:30 rideshare falls directly under the late-night travel exception defined in SEC-2.2. The reasoning is sound, accurately grounded in policy, and appropriately approved without unnecessary remediation requests."
+      }
+    },
+    {
+      "case_id": "TC-12",
+      "slice": "transit_edge_cases",
+      "description": "Rideshare permitted under heavy equipment exception (>30 lbs)",
+      "deterministic": {
+        "case_id": "TC-12",
+        "slice": "transit_edge_cases",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-12",
+        "status": "APPROVED",
+        "total_claimed": 21.0,
+        "approved_amount": 21.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-2.2",
+            "title": "Approved Ground Transit Exceptions",
+            "relevant_clause": "Rideshare is permitted even when public transit is under 15 minutes ONLY under the following documented conditions: ... 2. Heavy Equipment / Materials: Employee is transporting bulky business materials, tradeshow booth fixtures, or equipment exceeding 30 lbs. The employee must provide an explicit justification note referencing the exception upon expense submission.",
+            "explanation": "The employee transported 45 lbs of booth banner stands and audio equipment (exceeding the 30 lbs threshold) and provided an explicit justification note."
+          }
+        ],
+        "audit_summary": "Expense report EXP-TC-12 is approved. Although public transit transit time was under 15 minutes, the rideshare expense qualifies under Section 2.2 Exception 2 for transporting bulky equipment/materials exceeding 30 lbs.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly identified and applied Section 2.2 Exception 2 regarding transporting heavy or bulky equipment exceeding 30 lbs, properly overriding standard public transit preferences. Since the report is fully compliant and approved in full, no remediation action is required."
+      }
+    },
+    {
+      "case_id": "TC-13",
+      "slice": "transit_edge_cases",
+      "description": "Invalid weather excuse for rideshare (mild rain when transit is 10 min)",
+      "deterministic": {
+        "case_id": "TC-13",
+        "slice": "transit_edge_cases",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 19.0,
+        "expected_disallowed": 19.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-13",
+        "status": "REJECTED",
+        "total_claimed": 19.0,
+        "approved_amount": 0.0,
+        "disallowed_amount": 19.0,
+        "violations": [
+          {
+            "rule_id": "VIO-TRANSIT-RIDESHARE",
+            "policy_section": "SEC-2.1: Public Transit Preference & Rideshare Limitation",
+            "severity": "HARD_VIOLATION",
+            "description": "Rideshare service was used when public transit transit time was under 15 minutes without an approved exception under SEC-2.2.",
+            "evidence": "Employee note states 'Subway was 10 minutes away, but it was raining outside so I ordered an Uber' at 13:30. Standard rain does not qualify as an extreme weather advisory or safety hazard rendering transit inoperable.",
+            "disallowed_amount": 19.0
+          }
+        ],
+        "remediation_steps": [
+          "Provide evidence of an official severe weather emergency advisory or documented transit outage during the travel window if applicable.",
+          "For future travel where public transit is under 15 minutes, utilize public transit unless an approved exception (late night, heavy cargo >30 lbs, or severe weather advisory) applies."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-2.1",
+            "title": "Public Transit Preference & Rideshare Limitation",
+            "relevant_clause": "Rideshare services (e.g., Uber, Lyft, taxi, private car) are strictly disallowed if public transit transit time between origin and destination is under 15 minutes. If public transit is under 15 minutes and rideshare is used without a documented approved exception, the entire rideshare fare is non-reimbursable.",
+            "explanation": "Public transit was documented at 10 minutes, disallowing rideshare reimbursement."
+          },
+          {
+            "section_id": "SEC-2.2",
+            "title": "Approved Ground Transit Exceptions",
+            "relevant_clause": "Severe Weather / Safety Hazards: Extreme weather advisories or documented transit outages that render public transit unsafe or inoperable.",
+            "explanation": "Incidental rain does not satisfy the criteria of an extreme weather advisory or inoperable transit."
+          }
+        ],
+        "audit_summary": "The expense report was rejected because an Uber rideshare of $19.00 was claimed for a route where public transit was under 15 minutes (10 minutes away). Under SEC-2.1 and SEC-2.2, rideshare is disallowed unless travel occurs late-night (10 PM - 6 AM), involves equipment over 30 lbs, or encounters official severe weather advisories/transit outages. Rain does not meet these criteria, making the full $19.00 non-reimbursable.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor's decision is fully aligned with policy and the expected ground truth outcome. The auditor correctly distinguished ordinary precipitation from an official severe weather advisory or documented transit outage. The calculation to disallow the full $19.00 fare is accurate, and the remediation guidance provides a clear, professional path for resubmission if an official advisory did in fact exist."
+      }
+    },
+    {
+      "case_id": "TC-14",
+      "slice": "transit_edge_cases",
+      "description": "Rideshare boundary case where public transit is 14 minutes",
+      "deterministic": {
+        "case_id": "TC-14",
+        "slice": "transit_edge_cases",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 25.0,
+        "expected_disallowed": 25.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-14",
+        "status": "REJECTED",
+        "total_claimed": 25.0,
+        "approved_amount": 0.0,
+        "disallowed_amount": 25.0,
+        "violations": [
+          {
+            "rule_id": "VIO-GROUND-TRANSIT-LIMITATION",
+            "policy_section": "SEC-2.1: Public Transit Preference & Rideshare Limitation",
+            "severity": "HARD_VIOLATION",
+            "description": "Rideshare and taxi services are strictly disallowed when public transit travel time is under 15 minutes, unless an approved policy exception applies.",
+            "evidence": "Employee noted that public transit was a 14-minute train ride between Station A and Facility B, and travel took place at 16:00 with no documented safety, weather, or heavy equipment exception.",
+            "disallowed_amount": 25.0
+          }
+        ],
+        "remediation_steps": [
+          "If an approved exception under SEC-2.2 applied (such as transporting bulky equipment exceeding 30 lbs or documented severe transit disruptions), submit an updated justification note along with supporting evidence.",
+          "If no approved exception applies, the expense remains non-reimbursable per policy."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-2.1",
+            "title": "Public Transit Preference & Rideshare Limitation",
+            "relevant_clause": "Rideshare services (e.g., Uber, Lyft, taxi, private car) are strictly disallowed if public transit transit time between origin and destination is under 15 minutes. If public transit is under 15 minutes and rideshare is used without a documented approved exception, the entire rideshare fare is non-reimbursable.",
+            "explanation": "The public transit time was documented as 14 minutes, which is under the 15-minute threshold, making the entire taxi fare non-reimbursable."
+          },
+          {
+            "section_id": "SEC-2.2",
+            "title": "Approved Ground Transit Exceptions",
+            "relevant_clause": "Rideshare is permitted even when public transit is under 15 minutes ONLY under the following documented conditions: Late-Night Travel (10:00 PM to 6:00 AM), Heavy Equipment / Materials (>30 lbs), or Severe Weather / Safety Hazards.",
+            "explanation": "The trip occurred at 16:00 and no qualifying exceptions were cited in the report."
+          }
+        ],
+        "audit_summary": "Expense report EXP-TC-14 has been rejected. The employee claimed a $25.00 taxi fare for a route with a documented 14-minute public transit option. Under SEC-2.1 and SEC-2.2, taxi/rideshare travel is prohibited for trips with transit times under 15 minutes without an approved exception.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly identified the boundary violation where a 14-minute public transit option strictly triggers the prohibition under SEC-2.1 (<15 minutes). The rejection is fully compliant with policy expectations, and the remediation steps clearly outline acceptable exceptions under SEC-2.2 along with the necessary documentation to overturn the decision."
+      }
+    },
+    {
+      "case_id": "TC-15",
+      "slice": "transit_edge_cases",
+      "description": "Rideshare boundary case where public transit is 16 minutes",
+      "deterministic": {
+        "case_id": "TC-15",
+        "slice": "transit_edge_cases",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-15",
+        "status": "APPROVED",
+        "total_claimed": 22.0,
+        "approved_amount": 22.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-2.1",
+            "title": "Public Transit Preference & Rideshare Limitation",
+            "relevant_clause": "Rideshare services (e.g., Uber, Lyft, taxi, private car) are strictly disallowed if public transit transit time between origin and destination is under 15 minutes.",
+            "explanation": "The documented public transit duration between Station A and Facility C is 16 minutes, which exceeds the under-15-minute restriction, making the rideshare permissible."
+          }
+        ],
+        "audit_summary": "The expense report is compliant with T&E policy. The documented public transit route duration of 16 minutes exceeds the 15-minute restriction threshold outlined in SEC-2.1, thereby qualifying the Lyft rideshare expense for full reimbursement.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly interpreted the boundary condition in SEC-2.1, recognizing that a 16-minute transit duration exceeds the 15-minute threshold and therefore permits the rideshare expense. The decision is fully grounded in policy, properly approved, and accurately concludes that no remediation steps are needed."
+      }
+    },
+    {
+      "case_id": "TC-16",
+      "slice": "client_entertainment_and_docs",
+      "description": "Client dinner missing attendee names and affiliations",
+      "deterministic": {
+        "case_id": "TC-16",
+        "slice": "client_entertainment_and_docs",
+        "status_pass": true,
+        "predicted_status": "FLAGGED_FOR_REVIEW",
+        "expected_status": "FLAGGED_FOR_REVIEW",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-16",
+        "status": "FLAGGED_FOR_REVIEW",
+        "total_claimed": 273.0,
+        "approved_amount": 273.0,
+        "disallowed_amount": 0.0,
+        "violations": [
+          {
+            "rule_id": "VIO-CLIENT-ATTENDEES-MISSING",
+            "policy_section": "SEC-3.1: Documentation & Attendee Requirements",
+            "severity": "MISSING_INFO",
+            "description": "Client entertainment expenses require full names, professional titles, and company affiliations of all attendees.",
+            "evidence": "Receipt indicates dinner for 3 individuals ($273.00 total), but no attendees were documented in the submission.",
+            "disallowed_amount": 0.0
+          }
+        ],
+        "remediation_steps": [
+          "Provide the full names, professional titles, and company affiliations for all attendees present at the dinner.",
+          "Ensure the business justification includes anticipated trial collaboration outcomes."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-3.1",
+            "title": "Documentation & Attendee Requirements",
+            "relevant_clause": "Client entertainment expenses require full names, professional titles, and company affiliations of all attendees. Submissions missing attendee details or clear justification will be flagged for review and held until amended.",
+            "explanation": "No attendee list was provided for the client entertainment dinner claim."
+          },
+          {
+            "section_id": "SEC-1.2",
+            "title": "Alcohol Policy",
+            "relevant_clause": "For eligible dinners, total alcohol charges must not exceed 20% of the meal subtotal (pre-tax, pre-tip).",
+            "explanation": "Alcohol was $30.00 out of a $210.00 subtotal (14.29%), which complies with the 20% cap."
+          },
+          {
+            "section_id": "SEC-1.3",
+            "title": "Itemized Receipt Documentation",
+            "relevant_clause": "Gratuity (tip) is reimbursable up to a maximum of 20% of the pre-tax bill.",
+            "explanation": "Tip of $42.00 is exactly 20% of the $210.00 subtotal, meeting policy limits."
+          }
+        ],
+        "audit_summary": "Expense report EXP-TC-16 has been flagged for review. While alcohol and tip limits comply with policy, client entertainment documentation requires the complete attendee list (names, titles, and company affiliations) before reimbursement can be finalized.",
+        "confidence_score": 0.98
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor appropriately flagged the expense under SEC-3.1 for missing attendee documentation while holding the disallowed amount at $0.00 pending review. The remediation instructions clearly and constructively inform the employee precisely what details (names, titles, company affiliations) are required to complete the claim."
+      }
+    },
+    {
+      "case_id": "TC-17",
+      "slice": "client_entertainment_and_docs",
+      "description": "Vague justification for expensive client hosting",
+      "deterministic": {
+        "case_id": "TC-17",
+        "slice": "client_entertainment_and_docs",
+        "status_pass": true,
+        "predicted_status": "FLAGGED_FOR_REVIEW",
+        "expected_status": "FLAGGED_FOR_REVIEW",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-17",
+        "status": "FLAGGED_FOR_REVIEW",
+        "total_claimed": 286.0,
+        "approved_amount": 286.0,
+        "disallowed_amount": 0.0,
+        "violations": [
+          {
+            "rule_id": "VIO-CLIENT-ENT-JUSTIFICATION",
+            "policy_section": "SEC-3.1: Documentation & Attendee Requirements",
+            "severity": "MISSING_INFO",
+            "description": "The business justification provided is vague and does not articulate the commercial purpose or anticipated business outcome of the meeting.",
+            "evidence": "Justification note: 'Had dinner with client to discuss general business topics.'",
+            "disallowed_amount": 0.0
+          }
+        ],
+        "remediation_steps": [
+          "Provide an updated, substantive business justification specifying the commercial purpose of the meeting with Protogen and the anticipated business outcome."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-3.1",
+            "title": "Documentation & Attendee Requirements",
+            "relevant_clause": "A specific, substantive business justification articulating the commercial purpose of the meeting and anticipated business outcome. Vague justifications such as 'business dinner' or 'met with client' are insufficient. Submissions missing attendee details or clear justification will be flagged for review (MISSING_INFO) and held until amended.",
+            "explanation": "The justification provided does not satisfy the substantive business requirement and must be amended before full approval."
+          }
+        ],
+        "audit_summary": "The meal expense is within per-person caps ($143.00 per person vs. $150.00 limit) and the tip is compliant at 20%. However, the report is flagged for review due to a vague business justification under SEC-3.1.",
+        "confidence_score": 0.98
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor properly identified the policy infraction under SEC-3.1 regarding vague business justifications for client entertainment. Rather than prematurely disallowing the expense, it appropriately set the status to FLAGGED_FOR_REVIEW. The remediation instructions clearly and respectfully guide the employee to provide the exact information needed (commercial purpose and anticipated business outcome) to bring the claim into compliance."
+      }
+    },
+    {
+      "case_id": "TC-18",
+      "slice": "client_entertainment_and_docs",
+      "description": "Non-itemized credit card charge slip for $75 meal",
+      "deterministic": {
+        "case_id": "TC-18",
+        "slice": "client_entertainment_and_docs",
+        "status_pass": true,
+        "predicted_status": "FLAGGED_FOR_REVIEW",
+        "expected_status": "FLAGGED_FOR_REVIEW",
+        "amount_pass": false,
+        "disallowed_error": 75.0,
+        "predicted_disallowed": 75.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": false
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-18",
+        "status": "FLAGGED_FOR_REVIEW",
+        "total_claimed": 75.0,
+        "approved_amount": 0.0,
+        "disallowed_amount": 75.0,
+        "violations": [
+          {
+            "rule_id": "VIO-ITEMIZED-RECEIPT-MISSING",
+            "policy_section": "SEC-1.3: Itemized Receipt Documentation",
+            "severity": "MISSING_INFO",
+            "description": "Meal expense exceeds $25.00 but lacks an itemized receipt. Only a non-itemized credit card charge slip was provided.",
+            "evidence": "Receipt #1 [REC-18] total is $75.00 USD with Itemized: No (Visa Charge Slip: Total $75.00 Auth #991823).",
+            "disallowed_amount": 75.0
+          }
+        ],
+        "remediation_steps": [
+          "Obtain and submit a detailed, itemized receipt from Le Bistro Parisien listing individual food and beverage items, quantities, and prices for the dinner on 2026-10-03."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.3",
+            "title": "Itemized Receipt Documentation",
+            "relevant_clause": "An itemized receipt showing detailed individual line items, quantities, and prices is mandatory for all meal expenses exceeding $25.00. Credit card charge slips showing only the total amount without itemization are not acceptable documentation for claims over $25.00 and will be flagged for review until itemized proof is supplied.",
+            "explanation": "The expense of $75.00 exceeds the $25.00 threshold, requiring an itemized receipt to verify compliance with meal and alcohol policies."
+          }
+        ],
+        "audit_summary": "The expense report is flagged for review because the meal claim of $75.00 at Le Bistro Parisien exceeds the $25.00 itemization threshold and only a credit card charge slip was provided. Reimbursement is held pending the submission of an itemized receipt.",
+        "confidence_score": 0.98
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor properly identified the policy requirement under SEC-1.3, which mandates an itemized receipt for meal expenses exceeding $25.00. The decision to flag the non-itemized credit card charge slip aligns completely with policy, and the remediation guidance is clear, constructive, and actionable."
+      }
+    },
+    {
+      "case_id": "TC-19",
+      "slice": "client_entertainment_and_docs",
+      "description": "Non-itemized receipt for $18 meal (Compliant because under $25 threshold)",
+      "deterministic": {
+        "case_id": "TC-19",
+        "slice": "client_entertainment_and_docs",
+        "status_pass": true,
+        "predicted_status": "APPROVED",
+        "expected_status": "APPROVED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 0.0,
+        "expected_disallowed": 0.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-19",
+        "status": "APPROVED",
+        "total_claimed": 18.0,
+        "approved_amount": 18.0,
+        "disallowed_amount": 0.0,
+        "violations": [],
+        "remediation_steps": [],
+        "citations": [
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day.",
+            "explanation": "The total claimed meal amount of $18.00 is well within the $75.00 daily per diem limit."
+          },
+          {
+            "section_id": "SEC-1.3",
+            "title": "Itemized Receipt Documentation",
+            "relevant_clause": "An itemized receipt showing detailed individual line items, quantities, and prices is mandatory for all meal expenses exceeding $25.00. Gratuity (tip) is reimbursable up to a maximum of 20% of the pre-tax bill.",
+            "explanation": "The meal expense is $18.00, which is below the $25.00 threshold requiring an itemized receipt. The tip of $0.50 is approximately 3.1% of the subtotal, well within the 20% gratuity cap."
+          }
+        ],
+        "audit_summary": "The expense claim of $18.00 for lunch at Corner Deli complies with all company T&E policies. The total is below the $75.00 daily per diem cap, tip is under the 20% threshold, and itemized documentation is not required for meal claims of $25.00 or less. The report is approved in full.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor made the correct determination to approve the $18.00 meal expense. The decision accurately reflects the policy provision that itemized receipts are only required for meals exceeding $25.00. Since the claim is fully compliant, listing no violations or remediation steps is entirely appropriate."
+      }
+    },
+    {
+      "case_id": "TC-20",
+      "slice": "client_entertainment_and_docs",
+      "description": "Client entertainment exceeding $150 per person limit",
+      "deterministic": {
+        "case_id": "TC-20",
+        "slice": "client_entertainment_and_docs",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 155.0,
+        "expected_disallowed": 155.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-20",
+        "status": "REJECTED",
+        "total_claimed": 455.0,
+        "approved_amount": 300.0,
+        "disallowed_amount": 155.0,
+        "violations": [
+          {
+            "rule_id": "VIO-CLIENT-ENT-CAP",
+            "policy_section": "SEC-3.2: Per-Person Spending Cap",
+            "severity": "HARD_VIOLATION",
+            "description": "Client entertainment meal expense exceeded the maximum allowable cap of $150.00 per attendee (inclusive of food, tax, and tip).",
+            "evidence": "Submitted dinner expense at Per Se totaled $455.00 for 2 documented attendees ($227.50 per person), exceeding the $300.00 maximum allowed for 2 people.",
+            "disallowed_amount": 155.0
+          }
+        ],
+        "remediation_steps": [
+          "Acknowledge the policy deduction of $155.00 for exceeding the per-person client entertainment spending cap.",
+          "Re-submit expense report reflecting the approved reimbursement total of $300.00 ($150.00 per attendee cap), or obtain executive exception approval for the overage."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-3.2",
+            "title": "Per-Person Spending Cap",
+            "relevant_clause": "Client entertainment meals are subject to a maximum cap of $150.00 per attendee (inclusive of food, drinks, tax, and tip). Spending exceeding $150.00 per person will have the excess amount disallowed.",
+            "explanation": "The total receipt of $455.00 for 2 documented attendees exceeds the maximum allowed reimbursement of $300.00 ($150.00 per person) by $155.00."
+          }
+        ],
+        "audit_summary": "The expense report contains valid business justification and attendee documentation, and tip was compliant at 20%. However, the dinner total of $455.00 for 2 attendees ($227.50 per person) violates the strict $150.00 per attendee limit under SEC-3.2. Consequently, $155.00 is disallowed, and $300.00 is approved.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor accurately identified the policy cap violation under SEC-3.2. The calculation is exact: 2 attendees allow up to $300.00, resulting in a disallowed amount of $155.00 on the $455.00 claim. The remediation instructions are courteous, actionable, and clearly present standard pathways (adjusting the total to the cap or seeking an executive exception)."
+      }
+    },
+    {
+      "case_id": "TC-21",
+      "slice": "subtle_evasions_and_math",
+      "description": "Split receipt evasion on same day at same restaurant totaling over per diem",
+      "deterministic": {
+        "case_id": "TC-21",
+        "slice": "subtle_evasions_and_math",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 28.5,
+        "expected_disallowed": 28.5,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-21",
+        "status": "REJECTED",
+        "total_claimed": 103.5,
+        "approved_amount": 75.0,
+        "disallowed_amount": 28.5,
+        "violations": [
+          {
+            "rule_id": "VIO-DAILY-PER-DIEM",
+            "policy_section": "SEC-1.1: Daily Per Diem Limit",
+            "severity": "HARD_VIOLATION",
+            "description": "Total meal expenditures on 2026-10-04 exceeded the strict $75.00 daily per diem cap for individual business travel meals.",
+            "evidence": "Receipts REC-21A ($54.50) and REC-21B ($49.00) on 2026-10-04 total $103.50, exceeding the $75.00 daily cap by $28.50.",
+            "disallowed_amount": 28.5
+          },
+          {
+            "rule_id": "VIO-RECEIPT-SPLITTING",
+            "policy_section": "SEC-5.1: Artificial Receipt Splitting",
+            "severity": "HARD_VIOLATION",
+            "description": "A single dinner transaction at Luigi's Trattoria was split into two consecutive receipts within 45 minutes.",
+            "evidence": "Submitted REC-21A ($54.50 at 19:15 for appetizer/pasta) and REC-21B ($49.00 at 20:00 for entree/dessert) from the same venue on the same evening.",
+            "disallowed_amount": 0.0
+          }
+        ],
+        "remediation_steps": [
+          "Acknowledge the $75.00 daily meal per diem cap and refrain from splitting single dining transactions into multiple receipts.",
+          "Resubmit the claim reflecting the allowable $75.00 reimbursement cap for the day."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day. Any cumulative meal expenditure exceeding $75.00 on a single day is non-reimbursable for the excess amount. Consecutive receipts on the same calendar day must be combined when assessing the $75.00 limit.",
+            "explanation": "Both dinner receipts from 2026-10-04 aggregate to $103.50, exceeding the daily per diem limit by $28.50."
+          },
+          {
+            "section_id": "SEC-5.1",
+            "title": "Artificial Receipt Splitting",
+            "relevant_clause": "Intentionally splitting a single transaction into multiple smaller receipts is considered a policy violation. Audits must aggregate all receipts from the same vendor or within the same meal timeframe.",
+            "explanation": "Two separate receipts were generated for courses of the same dinner at the same restaurant 45 minutes apart."
+          }
+        ],
+        "audit_summary": "The expense report was rejected due to an artificial receipt split at Luigi's Trattoria and an excess over the daily meal per diem limit. The receipts on 2026-10-04 aggregate to $103.50, exceeding the $75.00 daily cap. Reimbursement is limited to $75.00, resulting in $28.50 disallowed.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor flawlessly detected both the intentional split transaction and the per diem cap overage. The specific sections (SEC-1.1 and SEC-5.1) are accurately cited, the math correctly disallows $28.50 while approving up to the $75.00 threshold, and the remediation guidance provides clear, constructive steps for the employee to resubmit their claim compliant with policy."
+      }
+    },
+    {
+      "case_id": "TC-22",
+      "slice": "subtle_evasions_and_math",
+      "description": "Disguised alcohol as Specialty Refreshment exceeding 20% cap",
+      "deterministic": {
+        "case_id": "TC-22",
+        "slice": "subtle_evasions_and_math",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 16.0,
+        "expected_disallowed": 16.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-22",
+        "status": "REJECTED",
+        "total_claimed": 91.0,
+        "approved_amount": 75.0,
+        "disallowed_amount": 16.0,
+        "violations": [
+          {
+            "rule_id": "VIO-ALCOHOL-CAP",
+            "policy_section": "SEC-1.2: Alcohol Policy",
+            "severity": "HARD_VIOLATION",
+            "description": "Alcohol charges exceeded the maximum allowable limit of 20% of the meal subtotal.",
+            "evidence": "Total meal subtotal was $70.00, permitting a maximum alcohol expense of $14.00 (20%). The receipt included $30.00 for Artisanal Botanical Craft Spirits, exceeding the cap by $16.00.",
+            "disallowed_amount": 16.0
+          },
+          {
+            "rule_id": "VIO-DAILY-PER-DIEM",
+            "policy_section": "SEC-1.1: Daily Per Diem Limit",
+            "severity": "HARD_VIOLATION",
+            "description": "Daily individual meal expenditure exceeded the strict $75.00 daily per diem limit.",
+            "evidence": "Claimed meal total for 2026-10-04 was $91.00, exceeding the $75.00 daily per diem limit by $16.00.",
+            "disallowed_amount": 0.0
+          }
+        ],
+        "remediation_steps": [
+          "Acknowledge the $16.00 alcohol and daily per diem excess deduction.",
+          "Resubmit the report claiming the compliant total of $75.00 or accept reimbursement adjusted to $75.00."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.2",
+            "title": "Alcohol Policy",
+            "relevant_clause": "For eligible dinners, total alcohol charges (including beer, wine, cocktails, and liquor) must not exceed 20% of the meal subtotal (pre-tax, pre-tip). Any alcohol expenditure exceeding the 20% cap is disallowable and will be deducted from the reimbursement total.",
+            "explanation": "Alcohol accounted for $30.00 of the $70.00 subtotal (42.86%), which exceeds the 20% threshold of $14.00."
+          },
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day. Any cumulative meal expenditure exceeding $75.00 on a single day is non-reimbursable for the excess amount.",
+            "explanation": "The total dinner receipt of $91.00 exceeded the daily maximum meal allowance of $75.00."
+          }
+        ],
+        "audit_summary": "The expense report violates SEC-1.2 (Alcohol Policy) and SEC-1.1 (Daily Per Diem Limit). The claimed alcohol expenditure of $30.00 exceeded the 20% subtotal allowance ($14.00) by $16.00, and the overall receipt of $91.00 exceeded the $75.00 daily per diem cap. A total of $16.00 is disallowed, resulting in an approved reimbursement of $75.00.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor accurately identified the disguised alcohol line item, applied the correct 20% subtotal limit ($14.00 cap on a $70.00 meal subtotal), and accurately disallowed $16.00. The correlation with the $75.00 daily per diem cap is logically consistent, and the remediation steps provide clear and actionable instructions for the claimant."
+      }
+    },
+    {
+      "case_id": "TC-23",
+      "slice": "subtle_evasions_and_math",
+      "description": "Solo breakfast including alcohol (100% disallowed)",
+      "deterministic": {
+        "case_id": "TC-23",
+        "slice": "subtle_evasions_and_math",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 8.0,
+        "expected_disallowed": 8.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-23",
+        "status": "REJECTED",
+        "total_claimed": 31.0,
+        "approved_amount": 23.0,
+        "disallowed_amount": 8.0,
+        "violations": [
+          {
+            "rule_id": "VIO-ALCOHOL-BREAKFAST",
+            "policy_section": "SEC-1.2: Alcohol Policy",
+            "severity": "HARD_VIOLATION",
+            "description": "Alcohol consumed during solo breakfast is strictly non-reimbursable and 100% disallowed under corporate policy.",
+            "evidence": "Receipt REC-23 lists a Mimosa Cocktail ($8.00) purchased at 08:15 during a solo breakfast.",
+            "disallowed_amount": 8.0
+          }
+        ],
+        "remediation_steps": [
+          "Deduct the $8.00 Mimosa Cocktail from the claim.",
+          "Resubmit the expense report for the compliant food and associated allowable expenses totaling $23.00."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.2",
+            "title": "Alcohol Policy",
+            "relevant_clause": "Alcohol is only eligible for reimbursement when consumed during evening dinner or approved client entertainment events. Alcohol consumed during solo breakfast or solo lunch is strictly non-reimbursable (100% disallowed).",
+            "explanation": "The claimant purchased an alcoholic beverage (Mimosa Cocktail) during a solo breakfast meal."
+          }
+        ],
+        "audit_summary": "The expense claim has been rejected due to a hard policy violation under SEC-1.2. Alcoholic beverages are strictly non-reimbursable during solo breakfasts. The $8.00 alcohol expense is disallowed, leaving an approved balance of $23.00.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor flawlessly applied policy SEC-1.2 disallowing alcohol during a solo breakfast. The disallowed calculation of $8.00 matches the claim details, leaving the compliant portion of $23.00 approved. Remediation guidance is concise, professional, and provides exact steps for resubmission."
+      }
+    },
+    {
+      "case_id": "TC-24",
+      "slice": "subtle_evasions_and_math",
+      "description": "Solo lunch with beer (100% disallowed under solo lunch policy)",
+      "deterministic": {
+        "case_id": "TC-24",
+        "slice": "subtle_evasions_and_math",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 9.0,
+        "expected_disallowed": 9.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-24",
+        "status": "REJECTED",
+        "total_claimed": 35.8,
+        "approved_amount": 26.8,
+        "disallowed_amount": 9.0,
+        "violations": [
+          {
+            "rule_id": "VIO-ALCOHOL-SOLO-LUNCH",
+            "policy_section": "SEC-1.2: Alcohol Policy",
+            "severity": "HARD_VIOLATION",
+            "description": "Alcohol purchase during solo lunch is strictly non-reimbursable.",
+            "evidence": "German Pilsner Draft ($9.00) purchased at 12:45 during a solo lunch break.",
+            "disallowed_amount": 9.0
+          }
+        ],
+        "remediation_steps": [
+          "Acknowledge the $9.00 deduction for the alcoholic beverage consumed during solo lunch.",
+          "Resubmit the expense report claiming only the eligible meal portion ($26.80)."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.2",
+            "title": "Alcohol Policy",
+            "relevant_clause": "Alcohol consumed during solo breakfast or solo lunch is strictly non-reimbursable (100% disallowed).",
+            "explanation": "Alcohol is strictly prohibited from reimbursement during solo daytime meals."
+          }
+        ],
+        "audit_summary": "The claim includes a $9.00 draft beer purchased during a solo lunch, in direct violation of SEC-1.2. The alcoholic beverage has been disallowed, reducing the approved reimbursement to $26.80.",
+        "confidence_score": 1.0
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor flawlessly applied policy SEC-1.2 by disallowing the $9.00 solo lunch alcoholic beverage while approving the remaining eligible meal amount of $26.80. The remediation instructions are clear, courteous, and outline the exact steps the employee must take to resubmit the adjusted claim."
+      }
+    },
+    {
+      "case_id": "TC-25",
+      "slice": "subtle_evasions_and_math",
+      "description": "Multi-meal day where combined breakfast lunch dinner exceeds $75 per diem",
+      "deterministic": {
+        "case_id": "TC-25",
+        "slice": "subtle_evasions_and_math",
+        "status_pass": true,
+        "predicted_status": "REJECTED",
+        "expected_status": "REJECTED",
+        "amount_pass": true,
+        "disallowed_error": 0.0,
+        "predicted_disallowed": 25.0,
+        "expected_disallowed": 25.0,
+        "citation_recall": 1.0,
+        "missing_citations": [],
+        "overall_deterministic_pass": true
+      },
+      "audit_output": {
+        "report_id": "EXP-TC-25",
+        "status": "REJECTED",
+        "total_claimed": 100.0,
+        "approved_amount": 75.0,
+        "disallowed_amount": 25.0,
+        "violations": [
+          {
+            "rule_id": "VIO-DAILY-PER-DIEM",
+            "policy_section": "SEC-1.1: Daily Per Diem Limit",
+            "severity": "HARD_VIOLATION",
+            "description": "Daily meal expenditures exceeded the maximum per diem cap of $75.00 for calendar day 2026-10-04.",
+            "evidence": "Total claimed meal expenditures for 2026-10-04 across receipts REC-25A ($25.00), REC-25B ($30.00), and REC-25C ($45.00) amount to $100.00, which exceeds the daily limit by $25.00.",
+            "disallowed_amount": 25.0
+          }
+        ],
+        "remediation_steps": [
+          "Acknowledge the $25.00 reduction for exceeding the daily per diem limit on 2026-10-04.",
+          "Accept the adjusted reimbursement amount of $75.00 or consult with your manager if exceptional circumstances apply."
+        ],
+        "citations": [
+          {
+            "section_id": "SEC-1.1",
+            "title": "Daily Per Diem Limit",
+            "relevant_clause": "Individual business travel meals are subject to a strict $75.00 daily per diem cap per calendar day. Any cumulative meal expenditure exceeding $75.00 on a single day is non-reimbursable for the excess amount. Consecutive receipts on the same calendar day must be combined when assessing the $75.00 limit.",
+            "explanation": "Receipts REC-25A, REC-25B, and REC-25C all occurred on 2026-10-04 and sum to $100.00, exceeding the $75.00 threshold by $25.00."
+          }
+        ],
+        "audit_summary": "Expense report EXP-TC-25 has been reviewed. While all individual receipts are properly itemized and tips are within policy limits, the cumulative meal total for 2026-10-04 ($100.00) breaches the strict $75.00 daily per diem cap under SEC-1.1. Consequently, $25.00 is disallowed, and the report is rejected for the full claimed amount with an adjusted approved amount of $75.00.",
+        "confidence_score": 0.98
+      },
+      "judge": {
+        "policy_groundedness_score": 5,
+        "remediation_actionability_score": 5,
+        "judgment_agreement": true,
+        "judge_critique": "The auditor correctly identified the breach of the daily per diem limit across the three meals, calculated the exact overage of $25.00, and approved the eligible $75.00. The cited policy rule and violation code are accurate, and the remediation guidance is clear, polite, and practical."
+      }
+    }
+  ]
+}
