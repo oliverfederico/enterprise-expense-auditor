@@ -255,10 +255,10 @@
     },
     "expected": {
       "status": "REJECTED",
-      "expected_disallowed_amount": 50.00,
+      "expected_disallowed_amount": 55.00,
       "expected_violations": ["SEC-1.2", "SEC-1.1"],
       "expected_policy_sections": ["SEC-1.2", "SEC-1.1"],
-      "notes": "Alcohol is $45 on $100 subtotal (45% > 20% cap; $25 excess). Remaining dinner total $105 exceeds $75 per diem cap by $25. Total disallowed = $50."
+      "notes": "Alcohol is $45 on $100 subtotal (45% > 20% cap; $25 excess). Remaining dinner total $105 exceeds $75 per diem cap by $30. Total disallowed = $55.00, leaving exactly the $75.00 approved per diem."
     }
   },
   {

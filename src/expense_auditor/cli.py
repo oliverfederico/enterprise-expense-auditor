@@ -8,6 +8,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 from expense_auditor.agent import ExpenseAuditorAgent
+from expense_auditor.graph_agent import AdvancedExpenseAuditor
 from expense_auditor.models.expense import ExpenseReport
 from expense_auditor.models.audit import AuditResult, AuditStatus
 
@@ -71,6 +72,12 @@ def display_audit_result(result: AuditResult) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Audit corporate expense reports against T&E policies.")
     parser.add_argument("report_file", nargs="?", help="Path to JSON expense report file")
+    parser.add_argument(
+        "--engine",
+        choices=["basic", "advanced"],
+        default="advanced",
+        help="Auditor engine to use: basic (initial RAG agent) or advanced (LangGraph StateGraph with deterministic tools)",
+    )
     parser.add_argument("--json", action="store_true", help="Output raw JSON instead of rich table")
     args = parser.parse_args()
 
@@ -87,7 +94,7 @@ def main() -> None:
         data = json.load(f)
 
     report = ExpenseReport.model_validate(data)
-    agent = ExpenseAuditorAgent()
+    agent = AdvancedExpenseAuditor() if args.engine == "advanced" else ExpenseAuditorAgent()
     result = agent.audit(report)
 
     if args.json:
