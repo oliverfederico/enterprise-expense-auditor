@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .card { fill: #161b22; stroke: #30363d; stroke-width: 1.5; rx: 10; }
+      .card-accent { fill: #161b22; stroke: #388bfd; stroke-width: 2; rx: 10; }
+      .card-tools { fill: #161b22; stroke: #a371f7; stroke-width: 2; rx: 10; }
+      .card-judge { fill: #161b22; stroke: #2ea043; stroke-width: 2; rx: 10; }
+      .text-title { fill: #f0f6fc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 20px; font-weight: 700; }
+      .text-heading { fill: #58a6ff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 600; }
+      .text-sub { fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; }
+      .text-body { fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; }
+      .arrow { stroke: #58a6ff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-purple { stroke: #a371f7; stroke-width: 2; fill: none; marker-end: url(#arrowhead-purple); }
+      .arrow-green { stroke: #2ea043; stroke-width: 2; fill: none; marker-end: url(#arrowhead-green); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#58a6ff" />
+    </marker>
+    <marker id="arrowhead-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a371f7" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2ea043" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" class="bg" />
+
+  <!-- Header -->
+  <text x="40" y="45" class="text-title">Enterprise Expense Policy Compliance Auditor</text>
+  <text x="40" y="70" class="text-sub">Architecture &amp; Multi-Step Verification Workflow (LangGraph + Gemini + LangSmith)</text>
+
+  <!-- Node 1: Input -->
+  <g transform="translate(40, 110)">
+    <rect width="240" height="130" class="card" />
+    <text x="20" y="32" class="text-heading">1. Employee Submission</text>
+    <text x="20" y="58" class="text-body">• Itemized Receipts &amp; Folios</text>
+    <text x="20" y="80" class="text-body">• Metadata (Dates, Times, Venue)</text>
+    <text x="20" y="102" class="text-body">• Business Notes &amp; Attendees</text>
+  </g>
+
+  <!-- Connector 1 -> 2 -->
+  <path d="M 280 175 L 340 175" class="arrow" />
+
+  <!-- Node 2: RAG Policy Retrieval -->
+  <g transform="translate(340, 110)">
+    <rect width="250" height="130" class="card-accent" />
+    <text x="20" y="32" class="text-heading">2. Policy Retrieval (RAG)</text>
+    <text x="20" y="58" class="text-body">• Category &amp; Keyword Match</text>
+    <text x="20" y="80" class="text-body">• SEC-1.1: $75 Daily Per Diem</text>
+    <text x="20" y="102" class="text-body">• SEC-1.2: 20% Alcohol Limit</text>
+    <text x="20" y="124" class="text-body">• SEC-2.1: Transit &lt; 15 min rule</text>
+  </g>
+
+  <!-- Connector 2 -> 3 -->
+  <path d="M 590 175 L 650 175" class="arrow" />
+
+  <!-- Node 3: Deterministic Tools -->
+  <g transform="translate(650, 110)">
+    <rect width="270" height="130" class="card-tools" />
+    <text x="20" y="32" class="text-heading" fill="#d2a8ff">3. Deterministic Tools</text>
+    <text x="20" y="58" class="text-body">• Alcohol Cap &amp; Timing Auditor</text>
+    <text x="20" y="80" class="text-body">• Daily Per Diem Aggregator</text>
+    <text x="20" y="102" class="text-body">• Transit Duration Checker</text>
+    <text x="20" y="124" class="text-body">• Receipt Split Fraud Detector</text>
+  </g>
+
+  <!-- Connector 3 down to 4 -->
+  <path d="M 785 240 L 785 290 L 610 290 L 610 320" class="arrow-purple" />
+
+  <!-- Node 4: Gemini Qualitative Reasoning -->
+  <g transform="translate(340, 320)">
+    <rect width="580" height="170" class="card-accent" />
+    <text x="20" y="32" class="text-heading">4. Gemini Reasoning &amp; Decision Synthesis (gemini-3.8-flash)</text>
+    <text x="20" y="60" class="text-body">• Qualitative Justification Check: Verifies legitimate commercial purpose for client dinners</text>
+    <text x="20" y="82" class="text-body">• Attendee Validation: Ensures full names, titles, and partner affiliations documented</text>
+    <text x="20" y="104" class="text-body">• Exception Verification: Validates late-night (22:00-06:00) &amp; heavy equipment transit exceptions</text>
+    <text x="20" y="126" class="text-body">• Structured Output (Pydantic): Emits Status, Violations, Citations, &amp; Remediation</text>
+    <text x="20" y="148" class="text-sub">Confidence Score: 0.98 | Traceable in LangSmith</text>
+  </g>
+
+  <!-- Connector 4 to 5 (Output) -->
+  <path d="M 340 405 L 280 405" class="arrow-green" />
+
+  <!-- Node 5: Output Audit Report -->
+  <g transform="translate(40, 320)">
+    <rect width="240" height="170" class="card-judge" />
+    <text x="20" y="32" class="text-heading" fill="#3fb950">5. Audit Report</text>
+    <text x="20" y="60" class="text-body">• Status: APPROVED /</text>
+    <text x="32" y="80" class="text-body">FLAGGED / REJECTED</text>
+    <text x="20" y="104" class="text-body">• Approved &amp; Disallowed $</text>
+    <text x="20" y="126" class="text-body">• Exact Policy Citations</text>
+    <text x="20" y="148" class="text-body">• Employee Remediation Steps</text>
+  </g>
+</svg>
